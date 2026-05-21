@@ -122,7 +122,7 @@ export default function Layout({ children, currentPath, onNavigate }: LayoutProp
                 </li>
                 <li className="flex gap-3 items-center text-stone-500">
                   <Phone className="w-4 h-4" />
-                  +510972494017
+                  +51972494017
                 </li>
                 <li className="flex gap-3 items-center text-stone-500">
                   <Mail className="w-4 h-4" />
