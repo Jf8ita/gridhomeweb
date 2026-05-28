@@ -15,12 +15,16 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
   const handleDownloadPDF = async () => {
     if (!tableRef.current) return;
     
+    const button = document.getElementById('download-btn');
+    if (button) button.style.display = 'none';
+
     try {
       const canvas = await html2canvas(tableRef.current, {
         scale: 2,
         useCORS: true,
         logging: false,
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        windowWidth: 1200 // Ensure desktop layout in capture
       });
       
       const imgData = canvas.toDataURL('image/png');
@@ -32,6 +36,9 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
       pdf.save('analisis-comparativo-gridhome.pdf');
     } catch (error) {
       console.error('Error generating PDF:', error);
+      alert('Hubo un error al generar el PDF. Por favor, intenta de nuevo o contacta con soporte.');
+    } finally {
+      if (button) button.style.display = 'flex';
     }
   };
 
@@ -118,7 +125,7 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
     { metric: "Confort Térmico", noInertia: "Excelente", inertia: "Máximo", radiators: "Buena", fancoils: "Media", electric: "Buena", hybrid: "Excelente" },
     { metric: "Velocidad Respuesta", noInertia: "Muy Rápida", inertia: "Lenta", radiators: "Rápida", fancoils: "Muy Rápida", electric: "Muy Rápida", hybrid: "Variable" },
     { metric: "Temp. Operación", noInertia: "30-35°C", inertia: "30-35°C", radiators: "40-45°C", fancoils: "35-45°C", electric: "25-30°C", hybrid: "30-45°C" },
-    { metric: "COP Estimado", noInertia: "4.8 - 5.2", inertia: "4.8 - 5.2", radiators: "3.5 - 4.0", fancoils: "4.0 - 4.5", electric: "1.0", hybrid: "Máximo" },
+    { metric: "COP Estimado", noInertia: "4.8 - 5.2", inertia: "4.8 - 5.2", radiators: "2.8-3.2", fancoils: "3.5 -3.8", electric: "1.0", hybrid: "Máximo" },
     { metric: "Instalación Ideal", noInertia: "Reforma/Obra", inertia: "Obra Nueva", radiators: "Reforma", fancoils: "Ambas", electric: "Pequeñas Reformas", hybrid: "Ambas" },
     { metric: "Impacto Visual", noInertia: "Invisible (0)", inertia: "Invisible (0)", radiators: "Visible", fancoils: "Visible (Mínimo)", electric: "Invisible (0)", hybrid: "Variable" },
     { metric: "Frío Activo", noInertia: "Refrescamiento", inertia: "Refrescamiento", radiators: "No", fancoils: "Sí (Potente)", electric: "No", hybrid: "Sí" },
@@ -285,6 +292,7 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
 
         <div className="mt-12 flex flex-col items-center gap-6">
           <button 
+            id="download-btn"
             onClick={handleDownloadPDF}
             className="flex items-center gap-3 bg-stone-900 text-white px-8 py-4 rounded-2xl font-bold text-sm hover:bg-black transition-all shadow-xl hover:shadow-stone-200"
           >
