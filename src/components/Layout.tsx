@@ -126,7 +126,7 @@ export default function Layout({ children, currentPath, onNavigate }: LayoutProp
                 </li>
                 <li className="flex gap-3 items-center text-stone-500">
                   <Mail className="w-4 h-4" />
-                  jeanochoaf@gmail.com
+                  info@gridhomeperu.com
                 </li>
               </ul>
             </div>
