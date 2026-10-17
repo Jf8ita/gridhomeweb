@@ -15,7 +15,6 @@ export default function Layout({ children, currentPath, onNavigate }: LayoutProp
     { id: 'home', label: 'Inicio' },
     { id: 'technology', label: 'Tecnología' },
     { id: 'aerothermal', label: 'Aerotermia' },
-    { id: 'calculator', label: 'Información' },
   ];
 
   const handleMobileNavigate = (path: string) => {
@@ -109,7 +108,6 @@ export default function Layout({ children, currentPath, onNavigate }: LayoutProp
                 <li><button onClick={() => onNavigate('home')} className="text-stone-500 hover:text-primary transition-colors">Inicio</button></li>
                 <li><button onClick={() => onNavigate('technology')} className="text-stone-500 hover:text-primary transition-colors">Tecnología</button></li>
                 <li><button onClick={() => onNavigate('aerothermal')} className="text-stone-500 hover:text-primary transition-colors">Aerotermia</button></li>
-                <li><button onClick={() => onNavigate('calculator')} className="text-stone-500 hover:text-primary transition-colors">Información</button></li>
               </ul>
             </div>
 
