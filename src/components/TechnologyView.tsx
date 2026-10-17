@@ -65,39 +65,6 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
       ideal: "Viviendas habituales con ocupación continua."
     },
     { 
-      id: 'no-inertia',
-      title: "Suelo Radiante sin Inercia (Sistema Seco)", 
-      desc: "Calor inteligente y de respuesta rápida.", 
-      icon: <Layers className="w-6 h-6" />,
-      quote: "Diseñado para quienes necesitan confort inmediato sin esperar horas. Al no tener mortero, es el sistema más ligero y eficiente para reformas y oficinas.",
-      functioning: "Los tubos se instalan sobre paneles aislantes con difusores de aluminio y el acabado (parquet o laminado) va directamente encima.",
-      pros: ["Rapidez: Se calienta y enfría casi como un radiador", "Bajo Perfil: Solo ocupa unos 3 cm de altura", "Peso: Perfecto para estructuras de madera o pisos altos"],
-      cons: ["Baja Inercia: Pierde calor rápidamente al apagar el sistema"],
-      ideal: "Oficinas, casas de fin de semana o departamentos donde no se quiere perder altura."
-    },
-    { 
-      id: 'radiators',
-      title: "Radiadores de Baja Temperatura", 
-      desc: "La evolución de la calefacción tradicional.", 
-      icon: <Thermometer className="w-6 h-6" />,
-      quote: "Diseñados para trabajar en armonía con la aerotermia, ofrecen una instalación limpia y eficiente sin necesidad de tocar tus suelos.",
-      functioning: "Radiadores de aluminio con superficie ampliada que permite calentar usando agua a solo 45°C (en lugar de los 70°C antiguos).",
-      pros: ["Instalación Sencilla: Sin reformas estructurales", "Costo Inicial: La opción de inversión (CAPEX) más equilibrada"],
-      cons: ["Estética: Ocupan espacio en las paredes", "Distribución: El calor se concentra cerca del emisor"],
-      ideal: "Reformas donde se quiere mantener el suelo actual pero migrar a aerotermia."
-    },
-    { 
-      id: 'fancoils',
-      title: "Fan Coils (Agua-Aire)", 
-      desc: "Versatilidad total: calefacción y refrigeración.", 
-      icon: <Wind className="w-6 h-6" />,
-      quote: "La solución técnica perfecta para climas húmedos, permitiendo un control preciso de la temperatura y la humedad sin riesgo de condensación.",
-      functioning: "Intercambiador de calor agua-aire con ventilador silencioso. Disponibles en pared, techo (cassette) o conductos.",
-      pros: ["Doble Función: Aire acondicionado y calefacción", "Deshumidificación: Vital para ciudades con alta humedad", "Seguridad: Evita el punto de rocío en el suelo"],
-      cons: ["Movimiento de aire: Generan ligero flujo de aire", "Mantenimiento: Requieren limpieza periódica de filtros"],
-      ideal: "Oficinas y hogares en zonas costeras o con alta humedad relativa."
-    },
-    { 
       id: 'electric',
       title: "Suelo Radiante Eléctrico", 
       desc: "Calor directo y focalizado mediante electricidad.", 
@@ -125,8 +92,8 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
     { metric: "Confort Térmico", noInertia: "Excelente", inertia: "Máximo", radiators: "Buena", fancoils: "Media", electric: "Buena", hybrid: "Excelente" },
     { metric: "Velocidad Respuesta", noInertia: "Muy Rápida", inertia: "Lenta", radiators: "Rápida", fancoils: "Muy Rápida", electric: "Muy Rápida", hybrid: "Variable" },
     { metric: "Temp. Operación", noInertia: "30-35°C", inertia: "30-35°C", radiators: "40-45°C", fancoils: "35-45°C", electric: "25-30°C", hybrid: "30-45°C" },
-    { metric: "COP Estimado", noInertia: "4.8 - 5.2", inertia: "4.8 - 5.2", radiators: "2.8-3.2", fancoils: "3.5 -3.8", electric: "1.0", hybrid: "Máximo" },
-    { metric: "Instalación Ideal", noInertia: "Reforma/Obra", inertia: "Obra Nueva", radiators: "Reforma", fancoils: "Ambas", electric: "Pequeñas Reformas", hybrid: "Ambas" },
+    { metric: "COP Estimado", noInertia: "4.8 - 5.2", inertia: "4.8 - 5.2", radiators: "3.5 - 4.0", fancoils: "4.0 - 4.5", electric: "1.0", hybrid: "Máximo" },
+    { metric: "Instalación Ideal", noInertia: "Reforma/Obra (casa)", inertia: "Obra Nueva", radiators: "Reforma", fancoils: "Ambas", electric: "Departamentos", hybrid: "Casas grandes" },
     { metric: "Impacto Visual", noInertia: "Invisible (0)", inertia: "Invisible (0)", radiators: "Visible", fancoils: "Visible (Mínimo)", electric: "Invisible (0)", hybrid: "Variable" },
     { metric: "Frío Activo", noInertia: "Refrescamiento", inertia: "Refrescamiento", radiators: "No", fancoils: "Sí (Potente)", electric: "No", hybrid: "Sí" },
   ];
@@ -267,9 +234,6 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
               <tr className="bg-stone-50 border-b border-stone-200">
                 <th className="p-6 font-bold text-stone-400 text-xs uppercase tracking-widest">Atributo</th>
                 <th className="p-6 font-bold text-stone-900 text-center text-sm">Sin Inercia</th>
-                <th className="p-6 font-bold text-stone-900 text-center text-sm">Con Inercia</th>
-                <th className="p-6 font-bold text-stone-900 text-center text-sm">Radiadores</th>
-                <th className="p-6 font-bold text-stone-900 text-center text-sm">Fancoils</th>
                 <th className="p-6 font-bold text-stone-900 text-center text-sm">Eléctrico</th>
                 <th className="p-6 font-bold text-stone-900 text-center text-sm">Híbrido</th>
               </tr>
@@ -279,9 +243,6 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
                 <tr key={idx} className="border-b border-stone-100 last:border-0 hover:bg-stone-50/50 transition-colors">
                   <td className="p-6 font-bold text-stone-700 bg-stone-50/20">{row.metric}</td>
                   <td className="p-6 text-center text-stone-600 text-sm">{row.noInertia}</td>
-                  <td className="p-6 text-center text-stone-600 text-sm">{row.inertia}</td>
-                  <td className="p-6 text-center text-stone-600 text-sm">{row.radiators}</td>
-                  <td className="p-6 text-center text-stone-600 text-sm">{row.fancoils}</td>
                   <td className="p-6 text-center text-stone-600 text-sm">{row.electric}</td>
                   <td className="p-6 text-center text-stone-900 font-bold text-sm bg-primary/5">{row.hybrid}</td>
                 </tr>
@@ -308,3 +269,4 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
     </div>
   );
 }
+
