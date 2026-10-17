@@ -121,8 +121,12 @@ export default function Layout({ children, currentPath, onNavigate }: LayoutProp
                   AV San Felipe 637 Jesus María, Lima, Perú
                 </li>
                 <li className="flex gap-3 items-center text-stone-500">
+                  <MapPin className="w-4 h-4" />
+                  Av Manco Capaq 619 Wanchaq, Cusco, Perú
+                </li>
+                <li className="flex gap-3 items-center text-stone-500">
                   <Phone className="w-4 h-4" />
-                  +51972494017
+                  +510972494017
                 </li>
                 <li className="flex gap-3 items-center text-stone-500">
                   <Mail className="w-4 h-4" />
