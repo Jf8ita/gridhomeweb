@@ -20,33 +20,6 @@ export default function HomeView({ onExplore }: HomeViewProps) {
       stats: { val: "Instantáneo", label: "Tiempo de Respuesta" }
     },
     {
-      id: 'inertia',
-      title: "Suelo radiante con inercia",
-      subtitle: "Confort constante",
-      desc: "Distribución sobre aislamiento y malla con hormigón autonivelante. La losa actúa como batería térmica para una estabilidad inigualable.",
-      image: "/assets/Suelo radiante con Inercia.jpg",
-      icon: <Zap className="w-6 h-6" />,
-      stats: { val: "24h", label: "Estabilidad Térmica" }
-    },
-    {
-      id: 'radiators',
-      title: "Radiadores de Baja Temperatura",
-      subtitle: "Eficiencia Renovada",
-      desc: "Emisores de aluminio diseñados para trabajar a 35-45°C. La solución perfecta para reformas sin obra pesada manteniendo un alto confort.",
-      image: "/assets/Radiadores y Fancoils.png",
-      icon: <Thermometer className="w-6 h-6" />,
-      stats: { val: "45°C", label: "Impulso Típico" }
-    },
-    {
-      id: 'fancoils',
-      title: "Fancoils",
-      subtitle: "Climatización Activa",
-      desc: "Equipos dinámicos de suelo o techo que permiten calefacción y refrigeración rápida. Ideales para estancias de uso ocasional.",
-      image: "/assets/Fancoil.png", 
-      icon: <Wind className="w-6 h-6" />,
-      stats: { val: "Dual", label: "Calor & Frío" }
-    },
-    {
       id: 'electric',
       title: "Suelo Radiante Eléctrico",
       subtitle: "Calor Directo",
