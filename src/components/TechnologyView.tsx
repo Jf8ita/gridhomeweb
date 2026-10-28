@@ -54,16 +54,16 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
 
   const systems = [
     { 
-      id: 'inertia',
-      title: "Suelo Radiante con Inercia (Sistema Húmedo)", 
-      desc: "El estándar de oro del confort térmico.", 
-      icon: <Zap className="w-6 h-6" />,
-      quote: "Utiliza la estructura de tu hogar como un acumulador de energía, liberando calor de forma constante y uniforme. Ideal para viviendas permanentes que buscan la máxima eficiencia.",
-      functioning: "Tubos de polietileno embebidos en una capa de mortero de cemento de 4-7 cm. El mortero absorbe el calor y lo libera lentamente (inercia térmica).",
-      pros: ["Máximo Confort: Calor radiante desde los pies", "Ahorro Extremo: Trabaja a temperaturas de 30-35°C", "Inercia: La casa sigue caliente por horas tras apagarlo"],
-      cons: ["Respuesta lenta: Tarda horas en alcanzar temperatura", "Obra Mayor: Requiere construcción nueva o reforma pesada"],
-      ideal: "Viviendas habituales con ocupación continua."
-    },
+      id: 'no-inertia',
+      title: "Suelo Radiante sin Inercia (Sistema Seco)", 
+      desc: "Calor inteligente y de respuesta rápida.", 
+      icon: <Layers className="w-6 h-6" />,
+      quote: "Diseñado para quienes necesitan confort inmediato sin esperar horas. Al no tener mortero, es el sistema más ligero y eficiente para reformas y oficinas.",
+      functioning: "Los tubos se instalan sobre paneles aislantes con difusores de aluminio y el acabado (parquet o laminado) va directamente encima.",
+      pros: ["Rapidez: Se calienta y enfría casi como un radiador", "Bajo Perfil: Solo ocupa unos 3 cm de altura", "Peso: Perfecto para estructuras de madera o pisos altos"],
+      cons: ["Baja Inercia: Pierde calor rápidamente al apagar el sistema"],
+      ideal: "Oficinas, casas de fin de semana o departamentos donde no se quiere perder altura."
+    }
     { 
       id: 'electric',
       title: "Suelo Radiante Eléctrico", 
