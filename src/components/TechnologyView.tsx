@@ -63,7 +63,7 @@ export default function TechnologyView({ expandedSection }: TechnologyViewProps)
       pros: ["Rapidez: Se calienta y enfría casi como un radiador", "Bajo Perfil: Solo ocupa unos 3 cm de altura", "Peso: Perfecto para estructuras de madera o pisos altos"],
       cons: ["Baja Inercia: Pierde calor rápidamente al apagar el sistema"],
       ideal: "Oficinas, casas de fin de semana o departamentos donde no se quiere perder altura."
-    }
+    },
     { 
       id: 'electric',
       title: "Suelo Radiante Eléctrico", 
