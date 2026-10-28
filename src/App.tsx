@@ -10,6 +10,7 @@ import HomeView from './components/HomeView';
 import TechnologyView from './components/TechnologyView';
 import CalculatorView from './components/CalculatorView';
 import AerothermalView from './components/AerothermalView';
+import EquipmentsProjectsView from './components/EquipmentsProjectsView';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState('home');
