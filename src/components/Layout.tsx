@@ -15,7 +15,7 @@ export default function Layout({ children, currentPath, onNavigate }: LayoutProp
     { id: 'home', label: 'Inicio' },
     { id: 'technology', label: 'Tecnología' },
     { id: 'aerothermal', label: 'Aerotermia' },
-    { id: 'equipments', label: 'Equipos & Proyectos' }
+    { id: 'equipments', label: 'Equipos & Proyectos' },
     { id: 'calculator', label: 'Información' }
   ];
 
