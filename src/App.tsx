@@ -39,6 +39,7 @@ export default function App() {
           {currentPath === 'home' && <HomeView onExplore={handleExplore} />}
           {currentPath === 'technology' && <TechnologyView expandedSection={expandedTechSection} />}
           {currentPath === 'aerothermal' && <AerothermalView />}
+          {currentPath === 'equipments' && <EquipmentsProjectsView />}
           {currentPath === 'calculator' && <CalculatorView />}
         </motion.div>
       </AnimatePresence>
