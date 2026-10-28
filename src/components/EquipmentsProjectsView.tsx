@@ -64,7 +64,7 @@ const INITIAL_EQUIPMENTS: Equipment[] = [
   {
     id: 'eq-1',
     name: 'Bomba de Calor Aerotermia Monoblock Grid-Pro',
-    category: 'Aerotermia Monoblock',
+    category: 'Aerotermia Monoblock1',
     image: '/assets/Monoblock.jpg',
     shortDesc: 'Unidad exterior integral de alta eficiencia R32/R290 para climatización frío/calor y ACS.',
     specs: {
