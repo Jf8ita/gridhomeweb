@@ -92,7 +92,7 @@ export const INITIAL_EQUIPMENTS: Equipment[] = [
     category: 'Suelo Radiante',
     image: imgMantaaAluminio,
     shortDesc: 'Malla calefactora encapsulada en lámina continua de aluminio reflectante, diseñada específicamente para suelos laminados, vinílicos, SPC y parquet en seco sin necesidad de cemento.',
-    estimatedPrice: 'Desde S/70/m²',
+    estimatedPrice: 'Desde S/70 /m²',
     specs: {
       power: '140 W/m² - 160 W/m²',
       cop: 'Difusión de calor homogénea por aluminio foil',
@@ -112,7 +112,7 @@ export const INITIAL_EQUIPMENTS: Equipment[] = [
     category: 'Termostatos',
     image: imgTermostatoAnalogico,
     shortDesc: 'Termostato de control manual por dial selector graduado. Precisión mecánica robusta, alta durabilidad y máxima sencillez operativa sin configuración compleja.',
-    estimatedPrice: 'Desde S/ 100',
+    estimatedPrice: 'S/ 100',
     specs: {
       power: 'Carga resistiva hasta 16A (3600W)',
       cop: 'Control blanco de respuesta precisa',
@@ -132,7 +132,7 @@ export const INITIAL_EQUIPMENTS: Equipment[] = [
     category: 'Termostatos',
     image: imgTermostatoZH1,
     shortDesc: 'Termostato digital con pantalla táctil retroiluminada de cristal oscuro, conectividad Wi-Fi, control por app móvil (Tuya/SmartLife) y programación horaria 7 días.',
-    estimatedPrice: 'Desde 180 soles)',
+    estimatedPrice: 'S/ 180',
     specs: {
       power: 'Relé de salida 16A con sensor dual',
       cop: 'Programación y control via wifi',
@@ -152,7 +152,7 @@ export const INITIAL_EQUIPMENTS: Equipment[] = [
     category: 'Termostatos',
     image: imgTermostatoSR,
     shortDesc: 'Termostato premium de alta gama Serie SR con dial circular iluminado OLED, sensor de humedad y temperatura ambiente, algoritmos de anticipación térmica y modo ECO inteligente.',
-    estimatedPrice: 'Desde 280',
+    estimatedPrice: 'S/280',
     specs: {
       power: 'Capacidad de mando 16A / Contacto seco opcional',
       cop: 'Diseño exclusivo para control optimización de consumo via wifi ',
@@ -192,7 +192,7 @@ export const INITIAL_EQUIPMENTS: Equipment[] = [
     category: 'Energía Solar',
     image: imgPanelesSolares,
     shortDesc: 'Generación solar fotovoltaica con paneles monocristalinos Tier-1 de tecnología bifacial PERC/TOPCon e inversor solar inteligente (on-grid o híbrido) para autoconsumo térmico y eléctrico.',
-    estimatedPrice: 'Desde 3 soles kW instalado' ,
+    estimatedPrice: 'Desde 3.8 soles kW instalado' ,
     specs: {
       power: '3.0 kWp a 12.0 kWp (Configurable por m²)',
       cop: 'Eficiencia de celda superior al 22.5%',
